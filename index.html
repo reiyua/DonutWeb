@@ -7,3 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <audio src="assets/music.mp3" autoplay="autoplay" loop="loop"></audio>
 </head>
+<body>
+    <pre id="output"></pre>
+    <script>
+        fetch('assets/output.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('output').textContent = data;
+            });
+    </script>
+</body>
+</html>
